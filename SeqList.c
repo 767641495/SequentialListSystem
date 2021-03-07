@@ -1,35 +1,32 @@
+#ifndef SeqList_C
+#define SeqList_C
 #include "SeqList.h"
 
 SeqList Create(int iSize) //创建顺序表,以0~99填充
 {
     SeqList list;
     list.pDatas = (DataElem *)malloc(iSize * sizeof(DataElem));
-    list.iLength = 0;
     list.iSize = iSize;
     if (list.pDatas == NULL)
-    {
         list.iSize = 0;
-    }
     srand(time(NULL));
     int i;
     for (i = 0; i < iSize; i++)
-    {
         list.pDatas[i] = rand() % 100;
-    }
     return list;
 }
+
 void Show(SeqList pSeqList) //显示顺序表
 {
     int i = 0;
-    while (i < pSeqList.iLength)
+    while (i < pSeqList.iSize)
     {
         int j = 0;
-        while (j++ < 10 && i < pSeqList.iLength)
-        {
-            printf("%6d", pSeqList.pDatas[i++]);
-        }
+        while (j++ < 10 && i < pSeqList.iSize)
+            printf("%-8d", pSeqList.pDatas[i++]);
         puts("");
     }
+    puts("\n");
 }
 void Clear(SeqList *pSeqList);                   //清空顺序表
 void Sort(SeqList *pSeqList);                    //顺序表排序
@@ -45,3 +42,5 @@ void ImportFromFile(SeqList *pSeqList);          //从文件中导入
 void ExportToFile(SeqList pSeqList);             //导出到文件
 DataElem MaxPlatform(SeqList pSeqList);          //求最大平台(最多连续相等的数)
 void Exit();                                     //退出程序
+
+#endif
