@@ -9,6 +9,7 @@ typedef struct SeqList
 {
     DataElem *pDatas; //存放元素表的缓冲区指针
     int iSize;        //缓冲区大小
+    int iLength;      //上限
 } SeqList;
 
 SeqList Create(int iSize);                       //创建顺序表
