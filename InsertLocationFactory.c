@@ -4,9 +4,10 @@ void InsertLocationFactory(SeqList *pSeqList)
 {
     int location, number;
     printf("	Please input the location to be inserted: ");
-    location = Read(0, pSeqList->iSize - 1);
-    printf("	Please input a nunber ∈ [0,99] to be inserted: ");
-    number = Read(0, 99);
+    location = Read(1, pSeqList->iSize+1);
+    location--;
+    printf("	Please input a nunber ∈ [0,1000000] to be inserted: ");
+    number = Read(0, 1000000);
     if (pSeqList->iLength < pSeqList->iSize + 1)
     {
         pSeqList->pDatas = (DataElem *)realloc(pSeqList->pDatas, (pSeqList->iSize + 10) * sizeof(DataElem));

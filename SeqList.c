@@ -24,7 +24,7 @@ void Show(SeqList pSeqList) //显示顺序表
     {
         int j = 0;
         printf("	");
-        while (j++ < 8 && i < pSeqList.iSize)
+        while (j++ < 10 && i < pSeqList.iSize)
             printf("%-8d", pSeqList.pDatas[i++]);
         puts("");
     }

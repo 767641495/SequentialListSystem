@@ -3,7 +3,7 @@
 void PartitionListFactory(SeqList *pSeqList)
 {
     printf("	The sequence before partition:");
-    int value = Read(0, 99);
+    int value = Read(0, 1000000);
     printf(GREEN "	The sequence after partition by %d:\n\n" NONE,value);
     Show(*pSeqList);
     int i = 0;

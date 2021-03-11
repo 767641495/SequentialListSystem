@@ -14,7 +14,7 @@ int Read(int left, int right) //读入一个int属于[left,right]
         }
         puts("");
         printf(RED "	Input Error!Please input again!range:[%d,%d]\n\n" NONE, left, right);
-        printf("	Please input again:\n\n");
+        printf("	Please input again:");
     }
 }
 #endif

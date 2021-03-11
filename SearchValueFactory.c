@@ -2,8 +2,8 @@
 
 void SearchValueFactory(SeqList *pSeqList)
 {
-    printf("	Please input a number ∈ [0,99] to search:");
-    int value = Read(0, 99);
+    printf("	Please input a number ∈ [0,1000000] to search:");
+    int value = Read(0, 1000000);
     int location;
     for (location = 0; location < pSeqList->iSize; location++)
         if (pSeqList->pDatas[location] == value)

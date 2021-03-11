@@ -3,8 +3,8 @@
 void DeleteValueFactory(SeqList *pSeqList)
 {
     int value;
-    printf("	Please input a number ∈ [0,99] to be deleted: ");
-    value = Read(0, 99);
+    printf("	Please input a number ∈ [0,1000000] to be deleted: ");
+    value = Read(0, 1000000);
     int cnt = 0;
     int i = 0;
     while (i < pSeqList->iSize)

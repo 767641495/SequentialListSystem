@@ -14,6 +14,7 @@ typedef struct SeqList
 
 SeqList Create(int iSize);                       //创建顺序表
 void Show(SeqList pSeqList);                     //显示顺序表
+/*
 void Clear(SeqList *pSeqList);                   //清空顺序表
 void Sort(SeqList *pSeqList);                    //顺序表排序
 DataElem SearchByPos(SeqList pSeqList, int pos); //通过位置查找元素
@@ -28,5 +29,5 @@ void ImportFromFile(SeqList *pSeqList);          //从文件中导入
 void ExportToFile(SeqList pSeqList);             //导出到文件
 DataElem MaxPlatform(SeqList pSeqList);          //求最大平台(最多连续相等的数)
 void Exit();                                     //退出程序
-
+*/
 #endif
