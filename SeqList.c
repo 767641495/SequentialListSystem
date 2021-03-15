@@ -17,6 +17,14 @@ SeqList Create(int iSize) //创建顺序表,以0~99填充
     return list;
 }
 
+void DeleteLocation(SeqList *pSeqList,int location)
+{
+    int i;
+    pSeqList->iSize--;
+    for (i = location; i < pSeqList->iSize; i++)
+        pSeqList->pDatas[i] = pSeqList->pDatas[i + 1];
+}
+
 void Show(SeqList pSeqList) //显示顺序表
 {
     int i = 0;

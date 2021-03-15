@@ -9,7 +9,7 @@ void SearchValueFactory(SeqList *pSeqList)
         if (pSeqList->pDatas[location] == value)
             break;
     if (location != pSeqList->iSize)
-        printf(GREEN "	The location of %d in the sequence list is: %d\n\n" NONE, value, location);
+        printf(GREEN "	The location of %d in the sequence list is: %d\n\n" NONE, value, location+1);
     else
         printf(RED "	The location of %d in the sequence list is NULL!\n\n" NONE, value);
 }
